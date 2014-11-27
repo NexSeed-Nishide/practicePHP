@@ -47,6 +47,10 @@
 
             // 保存処理を実行
             $result = mysql_query($sql, $link);
+
+            mysql_close($link);
+
+            header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
         }
     }
 ?>
