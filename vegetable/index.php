@@ -5,5 +5,21 @@
 </head>
 <body>
     <h1>野菜一覧だよ</h1>
+    <div>
+        <div>
+            <p>Category1</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+            </ul>
+        </div>
+        <div>
+            <p>Category2</p>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
