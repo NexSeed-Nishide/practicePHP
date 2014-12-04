@@ -30,42 +30,6 @@
     }
 
     /**
-     * itemテーブルからのデータを全て取得
-     */
-    function getItems() {
-        $link = connectDatabase();
-
-        $query = "SELECT * FROM items";
-        $result = mysql_query($query, $link);
-
-        $rows = mysql_num_rows($result);
-        $items = array();
-        for ($i = 0; $i < $numRows; $i++) {
-            $items[] = mysql_fetch_assoc($result);
-        }
-
-        return $items;
-    }
-
-    /**
-     * 全てのデータを取得する
-     */
-    function getAllItems() {
-        $link = connectDatabase();
-
-        $query = "SELECT * FROM categories, items WHERE categories.id = items.category_id";
-        $result = mysql_query($query, $link);
-
-        $rows = mysql_num_rows($result);
-        $datas = array();
-        for ($i = 0; $i < $rows; $i++) {
-            $datas[] = mysql_fetch_assoc($result);
-        }
-
-        return $datas;
-    }
-
-    /**
      * 特定のカテゴリのアイテム一覧を取得する
      */
     function getItemsWithSpecificCatetory($categoryId) {
